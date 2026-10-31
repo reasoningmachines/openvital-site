@@ -19,7 +19,7 @@ The local preview is http://127.0.0.1:4174. Rebuild and refresh after source edi
 
 Warm ivory, restrained green, system typography and original SVG geometry. Semantic navigation, visible keyboard focus, skip link, responsive layout, and reduced-motion scroll behavior. No browser JavaScript, analytics, cookies, forms, uploads, storage, billing engine or patient-data processing.
 
-Medproof is in development. Copy describes planned capabilities and on-device processing intent; it does not claim clinical effectiveness, legal eligibility, model performance or guaranteed savings. Contact details remain pending.
+Medproof is in development. Copy describes planned capabilities for an iPhone app; it does not claim clinical effectiveness, legal eligibility, model performance or guaranteed savings. Contact details remain pending.
 
 ## Publication
 
