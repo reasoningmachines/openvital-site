@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+const html = await readFile('index.html', 'utf8');
+const css = await readFile('styles.css', 'utf8');
+const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
+assert.equal(new Set(ids).size, ids.length, 'Duplicate IDs');
+for (const [, id] of html.matchAll(/href="#([^"]+)"/g)) assert(ids.includes(id), `Missing anchor ${id}`);
+assert.equal([...html.matchAll(/<h1\b/g)].length, 1, 'One primary heading');
+assert(!/<(?:script|form|input|iframe)\b/i.test(html), 'Static informational scope');
+assert(css.includes('prefers-reduced-motion:reduce'), 'Reduced motion rule');
+assert(css.includes(':focus-visible'), 'Visible focus');
+for (const file of ['index.html', 'styles.css', 'favicon.svg']) assert.equal(await readFile(file, 'utf8'), await readFile(`dist/${file}`, 'utf8'), `Stale build: ${file}`);
+console.log('Source validation passed: anchors, heading, static scope, accessibility hooks, exact build assets.');

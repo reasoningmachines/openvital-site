@@ -1,0 +1,13 @@
+# Kit local generated environment, cache, and scratch artifacts
+.env
+.envrc
+.kit/cache/
+.kit/tmp/
+.kit/temp/
+.kit/*.tmp
+.kit/*.lock
+
+# Local review artifacts and built output
+dist/
+output/
+.playwright-cli/
