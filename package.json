@@ -1,0 +1,13 @@
+{
+  "name": "openvital-marketing",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node --check scripts/build.mjs && node --check scripts/serve.mjs && node scripts/validate.mjs",
+    "lint": "node scripts/validate.mjs"
+  },
+  "engines": { "node": ">=22" }
+}
